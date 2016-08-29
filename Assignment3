@@ -1,0 +1,38 @@
+For this assignment, you will use the urllib library (https://docs.python.org/3/library/urllib.html) to retrieve a web page.  You will retrieve the ‘Uplink Summary’ page from a Jupiter terminal and then use Beautiful Soup to pull out some information from the page.  Finally, you will write some key statistics to a text file.
+
+If you would like to connect to an actual Jupiter terminal (which I would like you to do), you will need to run your program from your office PC.  I’ve include a function snippet below that will setup the required proxy in order to connect to a terminal in the field.
+
+def setup_proxy():
+    proxy_handler = urllib.request.ProxyHandler({'http': '66.82.3.130:80'})
+    opener = urllib.request.build_opener(proxy_handler)
+    urllib.request.install_opener(opener)
+
+
+Here is the URL you will need get the Uplink Summary stats from my home terminal:
+http://gue000000756.terminal.jupiter.hnops.net/cgi-bin/command.cgi?CommandStr=_COM_SYSMON_STATS?=1
+
+If you can’t work on this from your office PC or if you would like to start with an example local file, I’ve attached an example output HTML file.
+
+After retrieving the HTML file, use Beautiful Soup to pull out the following information:
+-          Stream ACKs, Stream NAKs
+-          SCMA Data ACKs, SCMA Data NAKs,
+-          Packet (PDU) Sent, Packets (PDU) Dropped
+
+An example of what the Uplink Summary page looks like is below:
+
+
+
+
+
+
+Lastly, scoring will be as follows:
+-          Program runs without error: 1 point
+-          Python is PEP8 compliant (see http://pep8online.com/): 1 point
+-          Uplink summary page is retrieved using urllib: 2 points
+-          Beautiful Soup is used to parse out stats mentioned above: 4 points
+-          Output text file is created with stats mentioned above: 2 points
+-          Extra Credit: Regular expression is used along with Beautiful Soup to parse out stats: 1 point
+
+Let me know if you have any questions.
+
+-Matt

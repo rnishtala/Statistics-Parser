@@ -1,0 +1,15 @@
+BW Usage:
+- PDUs Sent: '2368226'
+  PDUs dropped: '1232'
+Scma Data(Last 15 minutes):
+- Acks: '0'
+  Nacks: '0'
+Scma Data(Overall):
+- Acks: '0'
+  Nacks: '0'
+Stream(Last 15 minutes):
+- Acks: '6284'
+  Nacks: '0'
+Stream(Overall):
+- Acks: '4539817'
+  Nacks: '507'
